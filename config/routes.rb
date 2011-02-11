@@ -1,5 +1,8 @@
 Dots2done::Application.routes.draw do
 
+  get "dashboard/show"
+  match "dashboard" => "dashboard#show", :as=> :dashboard
+
   root :to => "home#index"
 
   resources :tasks
