@@ -32,7 +32,8 @@ gem 'ruby-debug19'
 group :test do
   gem 'cucumber-rails'
   gem 'rspec-rails'
-  gem 'capybara'
-  gem 'database_cleaner'
+#  gem 'capybara'
+#  gem 'database_cleaner'
+  gem 'webrat'
 end
 
