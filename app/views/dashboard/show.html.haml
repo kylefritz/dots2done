@@ -4,7 +4,7 @@
     .inner
       - @tasks.each do |task|
         %h1= task.name
-        %p.hightlight= task.description
+          %p.hightlight= task.description
         %p
           Days complete: 
           = "#{task.days_complete}, "

@@ -12,7 +12,7 @@ gem 'jquery-rails'
 
 #asset packing
 #when have internet, install
-#gem 'jammit'
+gem 'jammit'
 
 #use HAML instead of erb
 gem 'haml-rails'
