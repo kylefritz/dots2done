@@ -9,14 +9,15 @@
     #container
       #header
         %h1
-          %a{:href => "/"} dots2done
+          - if session[:user]
+            = link_to "dots2done", dashboard_path
+          - else 
+            %a{:href => "/"} dots2done
         #user-navigation
           %ul.wat-cf
             - if session[:user]
               %li 
                 %a{:href => "#"}= session[:user].name
-              %li
-                %a{:href => "#"}= t("web-app-theme.profile", :default => "Profile")
               %li
                 %a{:href => "#"}= t("web-app-theme.settings", :default => "Settings")
               %li
