@@ -12,6 +12,9 @@
           %a{:href => "/"} dots2done
         #user-navigation
           %ul.wat-cf
+            - if session[:user]
+              %li 
+                %a{:href => "#"}= session[:user].name
             %li
               %a{:href => "#"}= t("web-app-theme.profile", :default => "Profile")
             %li
