@@ -5,11 +5,13 @@ Dots2done::Application.routes.draw do
 
   root :to => "home#index"
 
+  match 'users/:id/be' => 'users#be' , :as => :be_user
+  match 'users/stop' => 'users#stop' , :as => :logout
+  
   resources :tasks
   resources :users
 
-  match 'users/:id/be' => 'users#be' , :as => :be_user
-  # The priority is based upon order of creation:
+ # The priority is based upon order of creation:
   # first created -> highest priority.
 
   # Sample of regular route:

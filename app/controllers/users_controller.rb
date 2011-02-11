@@ -44,6 +44,11 @@ class UsersController < ApplicationController
     redirect_to(:action=>"index", :notice => 'Youre '+@user.name)
   end
 
+  def stop
+    session[:user]=nil
+    redirect_to(root_path,:notice=>"You're logged out")
+  end 
+
   # POST /users
   # POST /users.xml
   def create

@@ -15,12 +15,15 @@
             - if session[:user]
               %li 
                 %a{:href => "#"}= session[:user].name
-            %li
-              %a{:href => "#"}= t("web-app-theme.profile", :default => "Profile")
-            %li
-              %a{:href => "#"}= t("web-app-theme.settings", :default => "Settings")
-            %li
-              %a.logout{:href => "/logout"}= t("web-app-theme.logout", :default => "Logout")
+              %li
+                %a{:href => "#"}= t("web-app-theme.profile", :default => "Profile")
+              %li
+                %a{:href => "#"}= t("web-app-theme.settings", :default => "Settings")
+              %li
+                %a.logout{:href => logout_path}= t("web-app-theme.logout", :default => "Logout")
+            - else
+              %li
+                %a.login{:href => users_path}= t("web-app-theme.login", :default => "Login") 
         #main-navigation
           %ul.wat-cf
       #wrapper.wat-cf
