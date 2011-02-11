@@ -1,8 +1,12 @@
 Dots2done::Application.routes.draw do
-  resources :tasks
+  devise_for :users
 
+  root :to => "home#index"
+
+  resources :tasks
   resources :users
 
+  match 'users/:id/be' => 'users#be' , :as => :be_user
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

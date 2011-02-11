@@ -13,6 +13,7 @@ gem 'jquery-rails'
 #use HAML instead of erb
 gem 'haml-rails'
 
+gem 'devise'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -24,6 +25,9 @@ gem 'haml-rails'
 # gem 'ruby-debug'
 group :developement do
   gem 'ruby-debug19'
+  gem 'hpricot'
+  gem 'ruby_parser'
+  gem 'web-app-theme'
 end
 
 # Bundle the extra gems:

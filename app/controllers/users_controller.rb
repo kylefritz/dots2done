@@ -37,6 +37,13 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
+  # POST /users/1/be
+  def be
+    @user = User.find(params[:id])
+    session[:user] = @user
+    redirect_to(:action=>"index", :notice => 'Youre '+@user.name)
+  end
+
   # POST /users
   # POST /users.xml
   def create
