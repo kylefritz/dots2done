@@ -12,3 +12,9 @@
           = task.days_total
         %hr/
 - content_for :sidebar, render(:partial => 'sidebar')
+
+- content_for :head do
+  :javascript
+    $(function(){
+      App.init();
+    });

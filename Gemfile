@@ -9,7 +9,11 @@ gem 'sqlite3'
 
 # Use jquery instead of prototype
 gem 'jquery-rails'
-   
+
+#asset packing
+#when have internet, install
+#gem 'jammit'
+
 #use HAML instead of erb
 gem 'haml-rails'
 
