@@ -13,7 +13,7 @@ gem 'jquery-rails'
 #use HAML instead of erb
 gem 'haml-rails'
 
-gem 'devise'
+#gem 'devise'
 
 gem "will_paginate", "~> 3.0.pre2"
 
