@@ -41,7 +41,7 @@ class UsersController < ApplicationController
   def be
     @user = User.find(params[:id])
     session[:user] = @user
-    redirect_to(:action=>"index", :notice => 'Youre '+@user.name)
+    redirect_to(dashboard_path, :notice => "You're "+@user.name)
   end
 
   def stop
