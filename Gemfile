@@ -30,7 +30,7 @@ gem "will_paginate", "~> 3.0.pre2"
 # To use debugger (ruby-debug for Ruby 1.8.7+, ruby-debug19 for Ruby 1.9.2+)
 # gem 'ruby-debug'
 group :developement do
-  gem 'ruby-debug19'
+#  gem 'ruby-debug19'
   gem 'hpricot'
   gem 'ruby_parser'
   gem 'web-app-theme'
