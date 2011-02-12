@@ -50,7 +50,7 @@
     $(function(){
         $('canvas').each(function(i,c){
           var $c=$(c);
-          var vals=$c.parent().find('.complete').text().split(',')
+          var vals=$c.parent().find('.complete').hide().text().split(',')
           var complete = parseInt(vals[0]);
           var total = parseInt(vals[1]);
           console.log(complete,total);
