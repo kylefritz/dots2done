@@ -16,3 +16,5 @@ stylesheets:
   app:
     - public/stylesheets/reset.css
     - public/stylesheets/*.css
+    - public/stylesheets/**/*.css
+    - public/stylesheets/web-app-theme/themes/warehouse/style.css

@@ -36,7 +36,6 @@ group :developement do
   gem 'web-app-theme'
 end
 
-# Bundle the extra gems:
 # gem 'bj'
 # gem 'nokogiri'
 # gem 'aws-s3', :require => 'aws/s3'
@@ -44,7 +43,8 @@ end
 group :test do
   gem 'cucumber-rails'
   gem 'rspec-rails'
-  gem 'capybara'
-  gem 'database_cleaner'
+#  gem 'capybara'
+#  gem 'database_cleaner'
+  gem 'webrat'
 end
 
