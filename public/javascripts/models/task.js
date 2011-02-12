@@ -1,4 +1,4 @@
-var Task = Backbone.Model.Extend({
+var Task = Backbone.Model.extend({
   url: function(){
     var base = "tasks";
     if (this.isNew()) return base;

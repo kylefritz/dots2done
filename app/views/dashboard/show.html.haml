@@ -3,18 +3,59 @@
     %h2.title Your Tasks 
     .inner
       - @tasks.each do |task|
-        %h1= task.name
-        %p.hightlight= task.description
-        %p
-          Days complete: 
-          = "#{task.days_complete}, "
-          Days total:
-          = task.days_total
-        %hr/
+        .task
+          %h1= task.name
+          %p.hightlight= task.description
+          %p.complete
+            = "#{task.days_complete}, "
+            = task.days_total
+          %canvas{:width=>450,:height=>44,:id=>"#{task.id}"}
+          %hr/
 - content_for :sidebar, render(:partial => 'sidebar')
 
 - content_for :head do
   :javascript
+    //$(function(){
+    //  App.init();
+    //});
+    function drawDot(ctx,x,y,r,fill){
+      ctx.beginPath();
+      ctx.arc(x,y,r*.6,0,360);
+        
+      if(fill){
+        ctx.fill();
+      }else{
+        ctx.lineWidth = r*.1;
+        ctx.stroke(); 
+      }
+      ctx.beginPath();
+      ctx.arc(x,y,r*.9,0,360);
+      ctx.lineWidth = r*.2;
+      ctx.stroke();
+    }
+    
+    function drawDots(c,t,$can){
+      var w=$can.width()-4*4;
+      var h=$can.height();
+      var y=h/2;
+      var dw=_.min([w/t,h]);
+      var dr=dw/2;
+      var ctx=$can[0].getContext('2d');
+      _.each(_.range(t),function(d){
+            var x=dr+d*2*dr+d*4;
+            console.log(y);
+            drawDot(ctx,x,y,dr,d<=c);
+          });
+    }
     $(function(){
-      App.init();
+        $('canvas').each(function(i,c){
+          var $c=$(c);
+          var vals=$c.parent().find('.complete').text().split(',')
+          var complete = parseInt(vals[0]);
+          var total = parseInt(vals[1]);
+          console.log(complete,total);
+          drawDots(complete,total,$c);
+        });
     });
+
+    

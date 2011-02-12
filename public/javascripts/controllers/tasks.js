@@ -1,4 +1,4 @@
-App.Controllers.Tasks = Backbone.Controllers.extend({
+App.Controllers.Tasks = Backbone.Controller.extend({
   routes:{
     "tasks/:id": "edit",
     "":"index",
