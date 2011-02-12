@@ -19,7 +19,7 @@ kyle.tasks<<[t1,t2]
 
 t3=Task.create({:name=>"drink a glass of water", :description=>"it's good for your health and more acceptable than bleach to drink", :days_total=> 7, :days_complete=>0})
 t4=Task.create({:name=>"go to the gym", :description=>"picks up chicks", :days_total=> 14, :days_complete=>10})
-t5=Task.create({:name=>"eat dinner at home", :description=>"i like eatting out but i'll never learn to cook that way", :days_total=> 1, :days_complete=>7})
+t5=Task.create({:name=>"eat dinner at home", :description=>"i like eatting out but i'll never learn to cook that way", :days_total=> 7, :days_complete=>3})
 nick.tasks<<[t3,t4,t5]
 
 
